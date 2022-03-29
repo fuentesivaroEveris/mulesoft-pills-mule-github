@@ -7,16 +7,6 @@ traits:
   error-responses: !include exchange_modules/f0280dae-3bd2-4d24-b347-3fde9546ba11/error-responses/1.0.0/error-responses.raml
 
 /images:
-  get:
-    is: [client-id-required, error-responses]  
-    responses:
-      200:
-        body:
-          application/json:
-            example:
-              {
-                "image": "example"
-              }
   post:
     is: [client-id-required, error-responses]  
     responses:
@@ -27,4 +17,13 @@ traits:
               {
                 "image": "example"
               }
-    
+  get:
+    is: [client-id-required, error-responses]  
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "image": "example"
+              }
