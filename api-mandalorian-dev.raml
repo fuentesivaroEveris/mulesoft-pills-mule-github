@@ -5,8 +5,7 @@ baseUri: https://mandalorian.cloudhub.io/api/v1/images
 traits:
   client-id-required: !include exchange_modules/f0280dae-3bd2-4d24-b347-3fde9546ba11/client-id-required/1.0.0/client-id-required.raml
   error-responses: !include exchange_modules/f0280dae-3bd2-4d24-b347-3fde9546ba11/error-responses/1.0.0/error-responses.raml
-
-
+  
 /images:
   is: [client-id-required, error-responses]
   get:
@@ -39,7 +38,7 @@ traits:
               {
                 "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAAAXNSR0IArs
 
-
+              }
     
 
     
