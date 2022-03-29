@@ -1,16 +1,68 @@
 #%RAML 1.0
 title: api-mandalorian-dev
-baseUri: 
-
-
+baseUri: https://mandalorian.cloudhub.io/api/v1/images
 
 traits:
   client-id-required: !include exchange_modules/f0280dae-3bd2-4d24-b347-3fde9546ba11/client-id-required/1.0.0/client-id-required.raml
   error-responses: !include exchange_modules/f0280dae-3bd2-4d24-b347-3fde9546ba11/error-responses/1.0.0/error-responses.raml
 
 /images:
-  is: [client-id-required, error-responses]
   get:
-    
-  
+    is: [client-id-required, error-responses]  
+    responses:
+      200:
+        body:
+          application/json:
+            type: | 
+              {
+                "title": "Get Images from the server",
+                "type": "object",
+                "properties": {
+                  
+                  "data": {
+                    "type": "object",
+                    "properties": {
+
+                      "image": {
+                      "type": "string"
+                                }
+
+                    }
+                  }
+                }
+              }
+            
+            example:
+              {
+                "image": "example"
+              }
+  post:
+    is: [client-id-required, error-responses]  
+    responses:
+      200:
+        body:
+          application/json:
+            type: | 
+              {
+                "title": "Get Images from the server",
+                "type": "object",
+                "properties": {
+                  
+                  "data": {
+                    "type": "object",
+                    "properties": {
+
+                      "image": {
+                      "type": "string"
+                                }
+
+                    }
+                  }
+                }
+              }
+            
+            example:
+              {
+                "image": "example"
+              }
     
