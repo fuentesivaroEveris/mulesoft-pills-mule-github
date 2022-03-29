@@ -32,11 +32,36 @@ traits:
                 }
               }
             
-            example: 
+            example:
               {
-                "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAAAXNSR0IArs
-
+                "image": "example"
               }
-    
+  post:
+    responses:
+      200:
+        body:
+          application/json:
+            type: | 
+              {
+                "title": "Get Images from the server",
+                "type": "object",
+                "properties": {
+                  
+                  "data": {
+                    "type": "object",
+                    "properties": {
 
+                      "image": {
+                      "type": "string"
+                                }
+
+                    }
+                  }
+                }
+              }
+            
+            example:
+              {
+                "image": "example"
+              }
     
