@@ -8,7 +8,6 @@ traits:
 
 /images:
   post:
-    is: [client-id-required, error-responses]  
     responses:
       200:
         body:
@@ -18,7 +17,6 @@ traits:
                 "image": "example"
               }
   get:
-    is: [client-id-required, error-responses]  
     responses:
       200:
         body:
